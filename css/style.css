@@ -1,0 +1,84 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
+    display: grid;
+    
+    /*グリット*/
+    grid-template:
+    "header header header" 100px
+    "center center right" 1fr
+    "footer footer footer"300px
+    / 150px 1fr 200px;
+    /*gap: 3px;*/
+
+}
+
+header {
+    grid-area: header;
+    background: #bee9b6;
+}
+
+main {
+    grid-area: center;
+
+    
+}
+
+h2 {
+    margin: 0px;
+}
+
+aside {
+    grid-area: right;
+
+}
+
+ul {
+    list-style: none;   /*リスト黒丸削除*/
+    padding: 0px;
+    margin: 0px;
+}
+
+
+li {
+    font-size: 20px;
+}
+
+#problem {
+    font-size: 20px;
+    
+}
+
+#answer {
+    margin: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+button{
+    display       : inline-block;
+    border-radius : 20%;          /* 角丸       */
+    font-size     : 18pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 12px;   /* 余白       */
+    background    : #0c8008;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    border        : 1px solid #7b7be6;    /* 枠の指定 */
+}
+
+#time{
+    font-size: 20px;
+    display:flex;/* flexbox */
+    display: inline-block;      /* インラインブロック要素にする */
+}
+
+footer {
+    grid-area: footer;
+    margin: auto;
+
+}
