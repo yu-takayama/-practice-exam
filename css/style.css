@@ -18,12 +18,12 @@ body {
 header {
     grid-area: header;
     background: #bee9b6;
-
 }
 
 main {
     grid-area: center;
 
+    
 }
 
 h2 {
