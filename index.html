@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="JA">
+<head>
+<meta charset="UTF-8">
+<title>模擬試験サイト</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+  <header>
+    <h1>CL模擬試験サイト.com</h1>
+  </header>
+
+    <nav>
+
+    </nav>
+    <main>
+      <div id="problem">
+      <h2>基本情報技術者試験 H14 春</h2>
+      <p>問題 XX<label id="problemtext"></p>
+        <p>２進数の 1.1011 と 1.1101 を加算した結果を 10 進数で表したものはどれか。</p>
+        <div id="test">
+        <p>ア <label id="A"></label></p>
+        <p>イ <label id="B"></label></p>
+        <p>ウ <label id="C"></label></p>
+        <p>エ <label id="D"></label></p>
+        </div> 
+      </div>
+
+        <div id="answer">
+          <p>解答欄<br>
+            <input type="radio" name="answerRadio" value="ア"style="transform:scale(2.0);"> ア
+            <input type="radio" name="answerRadio" value="イ"style="transform:scale(2.0);"> イ
+            <input type="radio" name="answerRadio" value="ウ"style="transform:scale(2.0);"> ウ
+            <input type="radio" name="answerRadio" value="エ"style="transform:scale(2.0);"> エ
+          </p>
+          <button type="button">次の問題</button>
+          <button type="button">前の問題</button>
+        </div>
+
+        <!--解答一覧-->
+          <div id="questiontable">
+            <table border="1" width="320">
+                <tr>
+                <th>問題No</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                </tr>
+                <tr>
+                <td>解答</td>
+                <td id="question1"></td>
+                <td id="question2"></td>
+                <td id="question3"></td>
+                <td id="question4"></td>
+                <td id="question5"></td>
+                <td id="question6"></td>
+                <td id="question7"></td>
+                </tr>
+                <tr>
+                <td>チェック</td>
+                <td id="check1"></td>
+                <td id="check2"></td>
+                <td id="check3"></td>
+                <td id="check4"></td>
+                <td id="check5"></td>
+                <td id="check6"></td>
+                <td id="check7"></td>
+                </tr>
+            </table>
+
+              <div id= "time">
+                <p>経過時間:<label id="timer"></p>
+                <button>採点する</button>
+              </div>
+          </div>
+
+    </main>
+
+    <!--右メニューバー-->
+    <aside>
+      <ul>
+        <li>
+          <a href="#">Topページ</a>
+        </li>
+
+        <li>
+          <a href="#">試験中止</a>
+        </li>
+
+        <li>
+          <a href="#">学習履歴</a>
+        </li>
+      </ul>
+    </aside>
+
+  <!--フッター-->
+  <footer>
+    ©️2021 CL株式会社-模擬試験サイト
+  </footer>
+
+<body>
+
+</body>
+</html>
