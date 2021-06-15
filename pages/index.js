@@ -5,23 +5,23 @@ import styles from '../styles/Home.module.css'
 
 //宣言
 export default function Home() {
-  const [mondaibun, setTime] = useState(null)
-  const [mondai_a, mondai_1] = useState(null)
-  const [mondai_b, mondai_2] = useState(null)
-  const [mondai_c, mondai_3] = useState(null)
-  const [mondai_d, mondai_4] = useState(null)
+  const [mondaibun, mondaibuns] = useState(null)
+  const [choice_a, Choice_1] = useState(null)
+  const [choice_b, Choice_2] = useState(null)
+  const [choice_c, Choice_3] = useState(null)
+  const [choice_d, Choice_4] = useState(null)
   const [time, settimer] = useState(null)
   useEffect(() => {
 
-    //問題文をセットするAPI
+    //作成したAPIを呼び出すところ
     fetch('/api/exaams')
       .then(res => res.json())
       .then(data => {
-        setTime(data[0].mondaibun)
-        mondai_1(data[0].houzi)
-        mondai_2(data[1].houzi)
-        mondai_3(data[2].houzi)
-        mondai_4(data[3].houzi)
+        mondaibuns(data[0].mondaibun) //問題文・表示のデータを取得
+        Choice_1(data[0].houzi)
+        Choice_2(data[1].houzi)
+        Choice_3(data[2].houzi)
+        Choice_4(data[3].houzi)
 
         console.log(data)
       });setInterval(() =>
@@ -70,10 +70,11 @@ return (
         </h1>
           <p>問題</p>
         <div >{mondaibun}</div>
-        <p>ア{mondai_a}</p>
-        <p>イ{mondai_b}</p>
-        <p>ウ{mondai_c}</p>
-        <p>エ{mondai_d}</p>
+        <p>選択肢</p>
+        <p>ア　{choice_a}</p>
+        <p>イ　{choice_b}</p>
+        <p>ウ　{choice_c}</p>
+        <p>エ　{choice_d}</p>
 
         <div id="time">
           
